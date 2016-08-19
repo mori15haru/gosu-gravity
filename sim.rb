@@ -5,6 +5,7 @@ class SimWindow < Gosu::Window
   @@w = 640
   @@h = 480
   @@t = 0.1
+
   def initialize(n)
     super @@w, @@h
     self.caption = "Ruby :: Gosu :: Particle"
