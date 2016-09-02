@@ -8,7 +8,7 @@ class Particle
     @y_boundry = window.height
     @t = t
     # fixed status
-    @colour = Gosu::Color::WHITE
+    @colour = Gosu::Color.new(*random_colour)
     @size = 10
   end
 
@@ -71,5 +71,10 @@ class Particle
         @y = 2 * @y_boundry - @y
       end
     end
+  end
+
+  def random_colour
+    prng = Random.new
+    Array.new(4) { prng.rand(0..255) }
   end
 end
