@@ -1,10 +1,10 @@
 ##Gravity
 It will generate particles with random initial location and velocity, simulate them in the gravity field, and 'detect and resolve' collisions between the particles and the boundries.
 
-##Demo
-[link](http://cl.ly/2K3V1Q2f3G20)
+##Screenshot
+<img src="https://github.com/mori15haru/gosu-gravity/blob/master/demo.png" width="300">
 
 ##Run
-```ruby sim.rb [NUM]```
+`ruby sim.rb [NUM]`
 
-Example. ```ruby sim.rb 10```
+For example, `ruby sim.rb 100` will add 100 particles. `ruby sim.rb` will use the default value, 10. `ESC` key will close the window.

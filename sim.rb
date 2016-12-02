@@ -11,7 +11,7 @@ class SimWindow < Gosu::Window
     super @@w, @@h
     self.caption = 'Ruby :: Gosu :: Gravity'
     @t = 0.05
-    @particles = self.generate_particles(n)
+    @particles = generate_particles(n)
   end
 
   def generate_particles(n)
