@@ -1,5 +1,5 @@
 require 'gosu'
-require './vector'
+require 'tiny_vector'
 
 class Giant
   attr_accessor :pos, :p, :r, :t, :m, :g, :size, :colour, :dwarf
@@ -9,7 +9,7 @@ class Giant
     @r = 0.075
     @t = 0.1
     @m = 5.0
-    @g = 1.0
+    @g = 400.0
 
     @size = 10
     @colour = Gosu::Color::WHITE
@@ -35,7 +35,7 @@ class Giant
   private
 
   def dist
-    (self.pos - @dwarf.pos)/20
+    self.pos - @dwarf.pos
   end
 
   def mag

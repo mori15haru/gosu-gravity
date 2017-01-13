@@ -1,0 +1,23 @@
+GIT
+  remote: https://github.com/mori15haru/tiny-vector.git
+  revision: f6bd0db1f770619c65be6d4ef7a057bffa68c9ae
+  specs:
+    tiny_vector (0.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    gosu (0.11.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  gosu
+  tiny_vector!
+
+RUBY VERSION
+   ruby 2.4.0p0
+
+BUNDLED WITH
+   1.13.7

@@ -1,5 +1,5 @@
 require 'gosu'
-require './vector'
+require 'tiny_vector'
 
 class Dwarf
   attr_accessor :pos, :p, :r, :t, :m, :g, :size, :colour, :giant
@@ -9,7 +9,7 @@ class Dwarf
     @r = 0.04
     @t = 0.1
     @m = 1.0
-    @g = 1.0
+    @g = 400.0
 
     @size = 5
     @colour = Gosu::Color::YELLOW
@@ -35,7 +35,7 @@ class Dwarf
   private
 
   def dist
-    (self.pos - @giant.pos)/20
+    self.pos - @giant.pos
   end
 
   def mag
