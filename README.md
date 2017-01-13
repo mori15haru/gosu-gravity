@@ -1,6 +1,8 @@
 ##Gravity
 It will generate particles with random initial location and velocity, simulate them in the gravity field, and 'detect and resolve' collisions between the particles and the boundries.
 
+**feature/orbit** branch is to simulate a dwarf planet with a giant planet nearby.
+
 ##Screenshot
 <img src="https://github.com/mori15haru/gosu-gravity/blob/master/demo.png" width="300">
 
