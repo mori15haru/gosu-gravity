@@ -1,20 +1,12 @@
 require 'gosu'
 require 'tiny_vector'
 
-class Dwarf
-  attr_accessor :pos, :p, :r, :t, :m, :g, :size, :colour, :giant
-  def initialize
-    @pos = Vec.new([100,490,0])
-    @p = -Vec.new([0,0.2,0.0])*5.0
-    @r = 0.04
-    @t = 0.1
-    @m = 1.0
-    @g = 400.0
+class Planet
+  attr_accessor :pos, :p, :r, :t, :m, :g, :size, :colour, :other
 
-    @size = 5
-    @colour = Gosu::Color::YELLOW
-
-    @giant = nil
+  def initialize(initial_status)
+    @pos, @p, @r, @t, @m, @g, @size, @colour = *initial_status
+    @other = nil
     @orbit = []
   end
 
@@ -35,7 +27,7 @@ class Dwarf
   private
 
   def dist
-    self.pos - @giant.pos
+    self.pos - other.pos
   end
 
   def mag
@@ -43,7 +35,7 @@ class Dwarf
   end
 
   def force_k
-    g * giant.m * m / mag
+    g * other.m * m / mag
   end
 
   def force
